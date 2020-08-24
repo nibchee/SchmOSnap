@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1045759109757",
+    "firebase_url": "https://schmosnap.firebaseio.com",
+    "project_id": "schmosnap",
+    "storage_bucket": "schmosnap.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045759109757:android:a3567b09aaf0b05f7bdf14",
+        "android_client_info": {
+          "package_name": "com.example.nirbhay.schmosnap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1045759109757-v94t2k9d9o5iro0ud6t27eum3tjpmfg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDw4TTFvV8Wol7LJSwFajLiz4qjQVhKt5E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1045759109757-v94t2k9d9o5iro0ud6t27eum3tjpmfg7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
