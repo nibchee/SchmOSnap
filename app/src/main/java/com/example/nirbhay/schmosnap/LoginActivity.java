@@ -27,7 +27,8 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
@@ -84,6 +85,7 @@ public class LoginActivity extends AppCompatActivity {
                         {
                            if(task.isSuccessful())
                            {
+
                                SendUserToMAinActivity();
                                Toast.makeText(LoginActivity.this,"You Are logged in Sucessfully",Toast.LENGTH_SHORT).show();
                                loadingBar.dismiss();
