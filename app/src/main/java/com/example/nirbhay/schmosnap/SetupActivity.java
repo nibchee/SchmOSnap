@@ -143,7 +143,7 @@ public class SetupActivity extends AppCompatActivity {
                 Uri resultUri = result.getUri();
 
                 final StorageReference filePath = UserProfileImageRef.child(currentUserID + ".jpg");//reference to create a folder under the created reference
-                //saves omage in firebase storage
+                //saves image in firebase storage
 
                 filePath.putFile(resultUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
@@ -152,7 +152,7 @@ public class SetupActivity extends AppCompatActivity {
                             @Override
                             public void onSuccess(Uri uri) {
                                 final String downloadUrl = uri.toString();
-                                UserRef.child("profileimage").setValue(downloadUrl).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                UserRef.child("profileimage").setValue(downloadUrl).addOnCompleteListener(  new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if (task.isSuccessful()) {
