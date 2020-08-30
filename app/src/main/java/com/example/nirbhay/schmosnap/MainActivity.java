@@ -156,14 +156,30 @@ public class MainActivity extends AppCompatActivity
                         PostsRef  //Datadbse Reference
                 ) {
             @Override
-            protected void populateViewHolder(PostsViewHolder postsViewHolder, Posts posts, int i)
+            protected void populateViewHolder(PostsViewHolder postsViewHolder, Posts posts, int position)
             {
+                //To get Post Key for editing & deleting
+                final String PostKey=getRef(position).getKey();
+
                 postsViewHolder.setFullname(posts.getFullname());
                 postsViewHolder.setTime(posts.getTime());
                 postsViewHolder.setDate(posts.getDate());
                 postsViewHolder.setDescription(posts.getDescription());
                 postsViewHolder.setPostimage(getApplicationContext(),posts.getPostimage());
                 postsViewHolder.setProfileimage(getApplicationContext(),posts.getProfileimage());
+
+                //this for if user clicks the post for editing & deleting then this sends the post key to ClickPost Activity
+                postsViewHolder.mView.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View v)
+                    {
+                        Intent clickPostIntent=new Intent(MainActivity.this,ClickPostActivity.class);
+                        clickPostIntent.putExtra("PostKey",PostKey);
+                        startActivity(clickPostIntent);
+
+                    }
+                });
             }
         };
 
