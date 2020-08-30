@@ -16,7 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.auth.api.signin.internal.Storage;
+import com.google.android.gms.auth.api.signin.*;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -141,6 +141,7 @@ public class SetupActivity extends AppCompatActivity {
                 loadingBar.setCanceledOnTouchOutside(true);
 
                 Uri resultUri = result.getUri();
+
 
                 final StorageReference filePath = UserProfileImageRef.child(currentUserID + ".jpg");//reference to create a folder under the created reference
                 //saves image in firebase storage
